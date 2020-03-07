@@ -1,0 +1,11 @@
+@import "css/reset.css";
+@import "css/margin.css";
+@import "css/z-index.css";
+@import "css/flexbox.css";
+@import "css/App.css";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
