@@ -21,10 +21,10 @@ class Home extends Component {
       </React.Fragment>
     ) : null
     return (
-      <div className="App">
-        <div className="App-header">
+      <div className="App home-container">
+        <div className="App-header navBar">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <h2 className="hideText">Welcome to React</h2>
         </div>
         <p className="App-intro">
           NYC Datasets

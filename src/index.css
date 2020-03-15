@@ -3,6 +3,7 @@
 @import "css/z-index.css";
 @import "css/flexbox.css";
 @import "css/App.css";
+@import "css/media.css";
 
 body {
   margin: 0;
