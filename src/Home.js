@@ -30,6 +30,7 @@ class Home extends Component {
           NYC Datasets
         </p>
         <div className="f">
+          <Link to={"/ny/test"}>Test Link</Link>
           {links}
         </div>
       </div>

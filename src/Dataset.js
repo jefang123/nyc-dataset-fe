@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import { Info } from './Info.js';
+// import { Info } from './Info.js';
 
 
 class Dataset extends Component {
-  state = {};
-  componentDidMount = () =>
-    fetch(`/info/${this.props.match.params.dataset}`)
-      .then(res => res.json())
-      .then(data => {
-        let { dataset_name, total, columns } = data
-        this.setState({dataset_name, count:total, columns})
-      })
+  state = {dataset_name:"test_dataset", count: 555};
+  // componentDidMount = () =>
+  //   fetch(`/info/${this.props.match.params.dataset}`)
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       let { dataset_name, total, columns } = data
+  //       this.setState({dataset_name, count:total, columns})
+  //     })
   
   // onSubmit = () => 
   //   fetch(`/api/${this.props.match.params.dataset}`)
@@ -22,9 +22,10 @@ class Dataset extends Component {
   //   })
 
   render() {
-    const { dataset_name, count, columns } = this.state;
-    let info = <Info columns={columns}/>;
-    console.log(this.state)
+    const { dataset_name, count } = this.state
+    // const { dataset_name, count, columns } = this.state;
+    // let info = <Info columns={columns}/>;
+    // console.log(this.state)
     return (
       <div className="App">
         <div className="App-header">
@@ -36,7 +37,7 @@ class Dataset extends Component {
         </p>
         <p>Current dataset is {dataset_name}</p>
         <p>Dataset count {count}</p>
-        {info}
+        {/* {info} */}
       </div>
     );
   }
