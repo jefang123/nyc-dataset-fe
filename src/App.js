@@ -4,7 +4,7 @@ import Home from './Home.js'
 import Dataset from './Dataset.js'
 
 export const App = () =>
-  <Router>
+  <Router basename={`${process.env.PUBLIC_URL}/`}>
     <Switch>
       <Route path="/" exact={true} component={Home} />
       {/* <Route path="/:state" component={Home} /> */}
