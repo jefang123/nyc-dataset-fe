@@ -5,7 +5,8 @@ import logo from './logo.svg';
 class Home extends Component {
   state = {};
   componentDidMount = () =>
-    fetch('/api' + this.props.location.search)
+    // fetch('/api' + this.props.location.search)
+    fetch("/api")
       .then(res => res.json())
       .then(data => {
         const { domain, ...datasets } = data
@@ -13,11 +14,12 @@ class Home extends Component {
       })
 
   render() {
+    console.log(this.props)
     const { datasets, domain } = this.state;
     const links = datasets ? Object.keys(datasets).map(dataset => 
       <React.Fragment key={dataset}>
-        <Link to={`/${domain}/${dataset}`}>{datasets[dataset]}</Link>
-        {/* <br/> */}
+        <Link to={`/info/${domain}/${dataset}`}>{datasets[dataset]}</Link>
+        {/* <Link to={`/data/${domain}/${dataset}`}>{datasets[dataset]</Link> */}
       </React.Fragment>
     ) : null
     return (
@@ -30,7 +32,6 @@ class Home extends Component {
           NYC Datasets
         </p>
         <div className="f">
-          <Link to={"/ny/test"}>Test Link</Link>
           {links}
         </div>
       </div>

@@ -1,16 +1,18 @@
+/* Component to server queried data */
+
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import { Info } from './Info.js';
 
 
 class Dataset extends Component {
-  state = {dataset_name:"test_dataset", count: 555};
+  state = {dataset_name:"test_dataset", count: 555, loading:true};
   componentDidMount = () =>
-    fetch(`/info/${this.props.match.params.dataset}`)
+    fetch(`/api/${this.props.match.params.dataset}`)
       .then(res => res.json())
       .then(data => {
         let { dataset_name, total, columns } = data
-        this.setState({dataset_name, count:total, columns})
+        this.setState({dataset_name, count:total, columns, loading:false})
       })
   
   // onSubmit = () => 
@@ -22,8 +24,8 @@ class Dataset extends Component {
   //   })
 
   render() {
-    const { dataset_name, count, columns } = this.state;
-    let info = <Info columns={columns}/>;
+    const { dataset_name, count, columns, loading } = this.state;
+    // let results = <Result data={data}/>;
     return (
       <div className="App">
         <div className="App-header">
@@ -35,7 +37,6 @@ class Dataset extends Component {
         </p>
         <p>Current dataset is {dataset_name}</p>
         <p>Dataset count {count}</p>
-        {info}
       </div>
     );
   }

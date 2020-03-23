@@ -8,7 +8,7 @@ export const App = () =>
     <Switch>
       <Route path="/" exact={true} component={Home} />
       {/* <Route path="/:state" component={Home} /> */}
-      <Route path="/:state/:dataset" component={Dataset} />
+      <Route path="/info/:state/:dataset" component={Dataset} />
     </Switch>
   </Router>
 
