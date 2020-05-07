@@ -1,12 +1,13 @@
+import '../index.css'
 import React from 'react';
-import { Button } from '@storybook/react/demo';
+import { Button } from '../components/Button';
 
 import { Input } from '../components/Input'
 
 export default { title: 'Button' };
 
-export const withText = () => <Button>Hello Button</Button>;
-
+const onClick = () => console.log("Hello")
+export const withText = () => <Button onClick={onClick}>Hello Button</Button>;
 export const withEmoji = () => (
   <Button>
     <span role="img" aria-label="so cool">

@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Button = ({buttonName}) => {
+export const Button = ({children, onClick}) => {
   return (
-    buttonName ? 
-      <button>
-        {buttonName}
+    children ? 
+      <button onClick={onClick}> 
+        {children}
       </button> : null
   )
 }
