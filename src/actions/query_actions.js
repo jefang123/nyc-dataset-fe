@@ -25,9 +25,9 @@ export const receiveQuery = dataset => {
   }
 }
 
-export const fetchDataset = (dataset) => {
+export const fetchDataset = () => {
   return dispatch => {
-    return APIQuery.fetchDataset(dataset).then(
+    return APIQuery.fetchDataset().then(
       data => {
         return dispatch(receiveDataset(data))
       }
