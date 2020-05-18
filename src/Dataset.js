@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import { Info } from './Info.js';
 
-
 class Dataset extends Component {
   state = {dataset_name:"test_dataset", count: 555};
   componentDidMount = () => {
