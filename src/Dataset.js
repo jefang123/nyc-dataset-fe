@@ -5,7 +5,7 @@ import { Info } from './Info.js';
 class Dataset extends Component {
   state = {dataset_name:"test_dataset", count: 555};
   componentDidMount = () => {
-    this.props.fetchDataset(this.props.match.params.dataset)
+    this.props.fetchQuery(this.props.match.params.dataset)
   }
   // onSubmit = () => 
   //   fetch(`/api/${this.props.match.params.dataset}`)

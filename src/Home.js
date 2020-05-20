@@ -5,13 +5,15 @@ import logo from './logo.svg';
 class Home extends Component {
   state = {};
   componentDidMount = () =>
+    this.props.fetchDataset()
+    
     // fetch('/api' + this.props.location.search)
-    fetch("/api")
-      .then(res => res.json())
-      .then(data => {
-        const { domain, ...datasets } = data
-        this.setState({ datasets,domain })
-      })
+    // fetch("/api")
+    //   .then(res => res.json())
+    //   .then(data => {
+    //     const { domain, ...datasets } = data
+    //     this.setState({ datasets,domain })
+    //   })
 
   render() {
     console.log(this.props)
