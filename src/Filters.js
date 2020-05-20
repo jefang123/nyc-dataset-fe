@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const defaultState = {}
 
-class Dataset extends Component {
+class Filters extends Component {
   state = defaultState;
 
   onChange = (key, value) => 
@@ -18,15 +18,16 @@ class Dataset extends Component {
 
   render() {
     const { dataset_name, count, columns } = this.state;
-    const Map = Object.keys(defaultState).map(key) =>
+    const Map = Object.keys(defaultState).map((key) =>
       <>
         <Input></Input>
         <Button></Button>
       </>
+    )
     return (
       {Map}
     )
   }
 }
 
-export default Dataset;
+export default Filters;
