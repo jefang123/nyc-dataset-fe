@@ -9,6 +9,7 @@ class Filters extends Component {
     this.setState({key:value})
 
   onSubmit = () => 
+    // this.props.fetchQuery(this.props.match.params.dataset, this.state)
     fetch(`/api/${this.props.match.params.dataset}`, json=this.state)
     .then(res => res.json())
     .then(data => {
@@ -19,10 +20,10 @@ class Filters extends Component {
   render() {
     const { dataset_name, count, columns } = this.state;
     const Map = Object.keys(defaultState).map((key) =>
-      <>
+      <div>
         <Input></Input>
-        <Button></Button>
-      </>
+        <Button onSubmit={()=>onSubmit()}></Button>
+      </div>
     )
     return (
       {Map}
