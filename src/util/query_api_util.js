@@ -13,7 +13,7 @@ export const fetchDataset = () => {
 }
 
 // queries given dataset
-export const queryDataset = (id) => {
-  fetch(`${API_URL}/api/${id}`)
+export const queryDataset = (id, offset=0) => {
+  fetch(`${API_URL}/api/${id}?o=${offset}`)
   .then(res => res.json())
 }
