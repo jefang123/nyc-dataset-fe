@@ -9,6 +9,9 @@ export const Results = ({results}) => {
     res.length ?
       <>
         {res}
-      </> : null
+      </> : 
+      <p>
+        no results
+      </p>
   )
 }
