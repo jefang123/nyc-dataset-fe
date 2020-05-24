@@ -5,7 +5,7 @@ const checkField = (field, desc) =>
   field ? 
     <p> {desc}: {field} </p> : null
 
-export const ResultColumn = (result) => {
+export const ResultColumn = ({result}) => {
 
   const {
     first_name,
@@ -20,7 +20,7 @@ export const ResultColumn = (result) => {
   } = result
 
   return (
-    <>
+    <div>
       {first_name ? checkField(first_name, "First Name") : null}
       {last_name ? checkField(last_name, "Last Name") : null}
       {mi ? checkField(mi, "MI") : null}
@@ -30,6 +30,6 @@ export const ResultColumn = (result) => {
       {pass_date ? checkField(pass_date, "Pass Date") : null}
       {expiration ? checkField(expiration, "Expiration") : null}
       {record_date ? checkField(record_date, "Record Date") : null}
-    </>
+    </div>
   )
 }
