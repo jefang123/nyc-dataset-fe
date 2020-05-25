@@ -2,13 +2,13 @@
 
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import { Info } from './Info.js';
+import { Results } from './Results';
 
 
 class Dataset extends Component {
   state = {dataset_name:"test_dataset", count: 555, loading:true};
   componentDidMount = () =>
-    this.props.fetchInfo(this.props.match.params.dataset)
+    this.props.fetchQuery(this.props.match.params.dataset)
 
     // fetch(`/api/${this.props.match.params.dataset}`)
     //   .then(res => res.json())
@@ -26,8 +26,9 @@ class Dataset extends Component {
   //   })
 
   render() {
-    const { dataset_name, count, columns, loading } = this.state;
-    // let results = <Result data={data}/>;
+    const data = this.state;
+    let results = <Results results={data}/>
+
     return (
       <div className="App">
         <div className="App-header">
@@ -39,6 +40,7 @@ class Dataset extends Component {
         </p>
         <p>Current dataset is {dataset_name}</p>
         <p>Dataset count {count}</p>
+        {results}
       </div>
     );
   }

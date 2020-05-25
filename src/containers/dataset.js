@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Dataset from '../Dataset';
-import { fetchQuery } from '../../actions/query_actions';
+import { fetchInfo } from '../../actions/query_actions';
 
 const msp = (state, ownProps) => {
   return {
@@ -10,7 +10,7 @@ const msp = (state, ownProps) => {
 
 const mdp = dispatch => {
   return {
-    fetchDataset: id => dispatch(fetchQuery(id)),
+    fetchInfo: id => dispatch(fetchInfo(id)),
   }
 }
 
