@@ -1,7 +1,6 @@
 /* Component to server queried data */
 
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import { Results } from './Results';
 
 
@@ -10,34 +9,12 @@ class Dataset extends Component {
   componentDidMount = () =>
     this.props.fetchQuery(this.props.match.params.dataset)
 
-    // fetch(`/api/${this.props.match.params.dataset}`)
-    //   .then(res => res.json())
-    //   .then(data => {
-    //     let { dataset_name, total, columns } = data
-    //     this.setState({dataset_name, count:total, columns, loading:false})
-    //   })
-  
-  // onSubmit = () => 
-  //   fetch(`/api/${this.props.match.params.dataset}`)
-  //   .then(res => res.json())
-  //   .then(data => {
-  //     let { dataset_name, total, columns } = data
-  //     this.setState({dataset_name, count:total, columns})
-  //   })
-
   render() {
     const data = this.state;
     let results = <Results results={data}/>
 
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2 className="hideText">Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
         <p>Current dataset is {dataset_name}</p>
         <p>Dataset count {count}</p>
         {results}
