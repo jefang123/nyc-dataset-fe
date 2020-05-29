@@ -5,7 +5,7 @@ const defaultState = {}
 class Filters extends Component {
   state = defaultState;
 
-  onChange = (key, value) => 
+  onChange = (value) => 
     this.setState({key:value})
 
   onSubmit = () => 

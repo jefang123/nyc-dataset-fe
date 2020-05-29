@@ -10,6 +10,7 @@ export const Results = ({results}) => {
       <>
         {res}
       </> : 
+      //{  null }
       <p>
         no results
       </p>

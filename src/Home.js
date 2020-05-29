@@ -16,12 +16,11 @@ class Home extends Component {
     //   })
 
   render() {
-    console.log(this.props)
     const { datasets, domain } = this.state;
     const links = datasets ? Object.keys(datasets).map(dataset => 
       <React.Fragment key={dataset}>
-        <Link to={`/info/${domain}/${dataset}`}>{datasets[dataset]}</Link>
-        {/* <Link to={`/data/${domain}/${dataset}`}>{datasets[dataset]</Link> */}
+        <Link to={`/info/${domain}/${dataset}`}>{datasets[dataset]} Info</Link>
+        <Link to={`/data/${domain}/${dataset}`}>{datasets[dataset]} Query</Link>
       </React.Fragment>
     ) : null
     return (
