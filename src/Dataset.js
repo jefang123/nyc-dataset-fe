@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Info } from './Info.js';
+import { Container } from './components/Container';
 
 class Dataset extends Component {
   state = {dataset_name:"test_dataset", count: 555};
@@ -29,11 +30,11 @@ class Dataset extends Component {
     const { dataset_name, count, columns } = this.state;
     let info = <Info columns={columns}/>;
     return (
-      <div className="App">
+      <Container>
         <p>Current dataset is {dataset_name}</p>
         <p>Dataset count {count}</p>
         {info}
-      </div>
+      </Container>
     );
   }
 }

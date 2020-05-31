@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react';
 import { Results } from './Results';
+import { Container } from './components/Container';
 
 
 class Dataset extends Component {
@@ -14,11 +15,11 @@ class Dataset extends Component {
     let results = <Results results={data}/>
 
     return (
-      <div>
+      <Container>
         <p>Current dataset is {dataset_name}</p>
         <p>Dataset count {count}</p>
         {results}
-      </div>
+      </Container>
     );
   }
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
-import logo from './logo.svg';
+import { Container } from './components/Container';
 
 class Home extends Component {
   state = {};
@@ -24,14 +24,14 @@ class Home extends Component {
       </React.Fragment>
     ) : null
     return (
-      <div className="App home-container">
+      <Container>
         <p className="App-intro">
           NYC Datasets
         </p>
         <div className="f">
           {links}
         </div>
-      </div>
+      </Container>
     );
   }
 }
