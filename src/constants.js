@@ -1,5 +1,5 @@
 const prod = {
-  API_URL : "",
+  API_URL : process.env.API_URL,
 }
 
 const dev = {
