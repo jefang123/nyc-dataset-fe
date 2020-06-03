@@ -1,5 +1,5 @@
 import React from 'react';
-import ResultColumn from './ResultColumn';
+import { ResultColumn } from './ResultColumn';
 
 export const Results = ({results}) => {
   const res = Object.keys(results).map(key => 

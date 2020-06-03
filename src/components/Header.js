@@ -1,16 +1,9 @@
 import React from 'react';
 
-// class = {
-//   max-width:100%,
-//   text-align:center
-// }
-
-
-export const Header = ({text}) => {
+export const Header = ({children}) => {
   return (
-    text ? 
-      <div className={c}>
-        text
-      </div> : null
+    <div className="header">
+      {children}
+    </div> 
   )
 }
