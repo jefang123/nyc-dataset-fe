@@ -4,6 +4,7 @@
 @import "css/flexbox.css";
 @import "css/App.css";
 @import "css/media.css";
+@import "css/container.css";
 
 body {
   margin: 0;

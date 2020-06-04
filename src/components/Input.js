@@ -1,10 +1,9 @@
 import React from 'react';
 
-const Input = ({inputName}) => {
+export const Input = ({inputName}) => {
   return (
-    InputName ? 
-      <input>
-        {inputName}
+    inputName ? 
+      <input type="text" placeholder={inputName}>
       </input> : null
   )
 }
