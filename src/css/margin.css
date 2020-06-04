@@ -1,0 +1,17 @@
+.ma { margin: auto }
+.mxa {
+  margin-left: auto;
+  margin-right: auto;
+}
+.mya {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.m0 {
+  margin: 0 0 0 0
+}
+
+.w8 {
+  max-width: 80%;
+}

@@ -1,0 +1,12 @@
+.container {
+  max-width: 100%;
+}
+
+.hidden {
+  display: none;
+  color: red;
+}
+
+.drop {
+  display: relative;
+}
