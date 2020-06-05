@@ -1,0 +1,45 @@
+/* SET UP GRID FOR MAIN CONTAINER */
+.main-container {
+  display: grid;
+  grid-template-columns: 30% auto;
+  grid-template-rows: 60px auto;
+  grid-template-areas: "head head"
+                       "sidebar main";
+                       /* "footer footer"; */
+}
+
+.mini-container {
+  display: grid;
+  grid-template-columns: 60px auto;
+  grid-template-rows: 60px auto;
+  grid-template-areas: "head head"
+                       "sidebar main";
+                       /* "footer footer"; */
+}
+
+/* HEADER */
+.header {
+  display: fixed;
+  height: 150px;
+  max-width: 80vw;
+  margin: 0 5rem;
+  background-color: blue;
+  text-align: center;
+  grid-area: head;
+}
+
+/* DATASET INFO */
+.aside {
+  grid-area: sidebar;
+}
+
+/* QUERY RESULTS */
+.main {
+  grid-area: main;
+  overflow: scroll;
+}
+
+/* FOOTER */
+/* .footer {
+  grid-area: footer;
+} */
