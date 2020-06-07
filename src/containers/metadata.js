@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Data from '../Data';
+import Metadata from '../Metadata';
 import { fetchQuery } from '../../actions/query_actions';
 
 const msp = (state, ownProps) => {
@@ -14,4 +14,4 @@ const mdp = dispatch => {
   }
 }
 
-export default connect(msp, mdp)(Data);
+export default connect(msp, mdp)(Metadata);
