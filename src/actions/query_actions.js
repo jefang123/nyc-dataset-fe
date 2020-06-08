@@ -20,9 +20,11 @@ export const receiveInfo = dataset => {
   }
 }
 
-export const receiveQuery = dataset => {
+export const receiveQuery = data => {
+  const { domain, ...dataset } = data
   return {
     type: RECEIVE_QUERY,
+    domain,
     dataset
   }
 }
@@ -36,7 +38,8 @@ export const receiveMetadata = dataset => {
 
 export const fetchDataset = () => {
   return dispatch => {
-    return APIQuery.fetchDataset().then(
+    return APIQuery.fetchDataset()
+    .then(
       data => {
         return dispatch(receiveDataset(data))
       }
@@ -64,7 +67,7 @@ export const fetchQuery = (dataset) => {
   }
 }
 
-export const fetchMetadat = (dataset) => {
+export const fetchMetadata = (dataset) => {
   return dispatch => {
     return APIQuery.fetchMetadata(dataset).then(
       data => {

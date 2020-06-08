@@ -7,9 +7,9 @@ export const Results = ({results}) => {
     )
   return (
     res.length ?
-      <>
+      <div>
         {res}
-      </> : 
+      </div> : 
       //{  null }
       <p>
         no results

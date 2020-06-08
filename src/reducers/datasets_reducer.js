@@ -4,28 +4,27 @@ import { merge } from 'lodash';
 export default (state={}, action) => {
   const data = action.dataset
   Object.freeze(state);
+  const newState = merge({}, state)
   switch (action.type) {
     case RECEIVE_DATASET:
-      const newState = merge({}, state)
+      console.log(action)
       const { domain, ...datasets } = data
       newState.domain = domain
       newState.datasets = datasets
+      console.log(newState)
       return newState
     case RECEIVE_INFO:
-      const state = merge({}, state)
       const { columns, dataset_name, total } = data
-      state.columns = columns
-      state.dataset_name = dataset_name 
-      state.total = total
-      return state
+      newState.columns = columns
+      newState.dataset_name = dataset_name 
+      newState.total = total
+      return newState
     case RECEIVE_QUERY:
-      const state = merge({}, state)
-      state.results = data
-      return state 
+      newState.results = data
+      return newState 
     case RECEIVE_METADATA:
-      const state = merge({}, state)
       // new endpoint data
-      return state    
+      return newState    
     default:
       return state;
   }

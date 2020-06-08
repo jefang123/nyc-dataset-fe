@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Container } from './components/Container';
 
 class Home extends Component {
-  state = {};
+  // state = {}
   componentDidMount = () =>
     this.props.fetchDataset()
-    
+  
     // fetch('/api' + this.props.location.search)
     // fetch("/api")
     //   .then(res => res.json())
@@ -16,14 +16,14 @@ class Home extends Component {
     //   })
 
   render() {
-    const { datasets, domain } = this.state;
+    let { datasets, domain } = this.props.dataset;
     const links = datasets ? Object.keys(datasets).map(dataset => 
       <React.Fragment key={dataset}>
         <Link to={`/info/${domain}/${dataset}`}>{datasets[dataset]} Info</Link>
         <Link to={`/data/${domain}/${dataset}`}>{datasets[dataset]} Query</Link>
       </React.Fragment>
     ) : null
-    return (
+    return ( datasets ? 
       <Container>
         <p className="App-intro">
           NYC Datasets
@@ -31,7 +31,7 @@ class Home extends Component {
         <div className="f">
           {links}
         </div>
-      </Container>
+      </Container> : "nothing here"
     );
   }
 }

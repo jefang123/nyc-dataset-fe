@@ -16,8 +16,8 @@ class Dataset extends Component {
 
     return (
       <Container>
-        <p>Current dataset is {dataset_name}</p>
-        <p>Dataset count {count}</p>
+        {/* <p>Current dataset is {dataset_name}</p>
+        <p>Dataset count {count}</p> */}
         {results}
       </Container>
     );
