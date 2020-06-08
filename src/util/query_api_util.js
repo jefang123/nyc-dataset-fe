@@ -1,8 +1,14 @@
 import { API_URL } from "../constants";
 
-// fetch metadata of given dataset
+// fetch simple metadata of given dataset
 export const fetchDatasetInfo = (id) => {
   fetch(`${API_URL}/info/${id}`)
+  .then(res => res.json())
+}
+
+// fetch extended metadata of given dataset
+export const fetchMetadata = (id) => {
+  fetch(`${API_URL}/metadata/${id}`)
   .then(res => res.json())
 }
 

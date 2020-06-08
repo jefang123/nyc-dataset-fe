@@ -1,4 +1,4 @@
-import { RECEIVE_DATASET, RECEIVE_INFO, RECEIVE_QUERY } from '../actions/query_actions';
+import { RECEIVE_DATASET, RECEIVE_INFO, RECEIVE_QUERY, RECEIVE_METADATA } from '../actions/query_actions';
 import { merge } from 'lodash';
 
 export default (state={}, action) => {
@@ -21,7 +21,11 @@ export default (state={}, action) => {
     case RECEIVE_QUERY:
       const state = merge({}, state)
       state.results = data
-      return state      
+      return state 
+    case RECEIVE_METADATA:
+      const state = merge({}, state)
+      // new endpoint data
+      return state    
     default:
       return state;
   }

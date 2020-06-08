@@ -3,6 +3,8 @@ import * as APIQuery from '../util/query_api_util';
 export const RECEIVE_DATASET = 'RECEIVE_DATASET';
 export const RECEIVE_INFO = 'RECEIVE_INFO';
 export const RECEIVE_QUERY = 'RECEIVE_QUERY';
+export const RECEIVE_METADATA = 'RECEIVE_METADATA';
+
 
 export const receiveDataset = dataset => {
   return {
@@ -21,6 +23,13 @@ export const receiveInfo = dataset => {
 export const receiveQuery = dataset => {
   return {
     type: RECEIVE_QUERY,
+    dataset
+  }
+}
+
+export const receiveMetadata = dataset => {
+  return {
+    type: RECEIVE_METADATA,
     dataset
   }
 }
@@ -50,6 +59,16 @@ export const fetchQuery = (dataset) => {
     return APIQuery.fetchQuery(dataset).then(
       data => {
         return dispatch(receiveQuery(data))
+      }
+    )
+  }
+}
+
+export const fetchMetadat = (dataset) => {
+  return dispatch => {
+    return APIQuery.fetchMetadata(dataset).then(
+      data => {
+        return dispatch(receiveMetadata(data))
       }
     )
   }
