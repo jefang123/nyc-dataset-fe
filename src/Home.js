@@ -3,17 +3,9 @@ import { Link } from 'react-router-dom'
 import { Container } from './components/Container';
 
 class Home extends Component {
-  // state = {}
+  state = {}
   componentDidMount = () =>
     this.props.fetchDataset()
-  
-    // fetch('/api' + this.props.location.search)
-    // fetch("/api")
-    //   .then(res => res.json())
-    //   .then(data => {
-    //     const { domain, ...datasets } = data
-    //     this.setState({ datasets,domain })
-    //   })
 
   render() {
     let { datasets, domain } = this.props.dataset;

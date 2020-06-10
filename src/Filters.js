@@ -18,7 +18,6 @@ class Filters extends Component {
     })
 
   render() {
-    const { dataset_name, count, columns } = this.state;
     const Map = Object.keys(defaultState).map((key) =>
       <div>
         <Input></Input>
