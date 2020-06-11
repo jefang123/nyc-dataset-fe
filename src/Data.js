@@ -6,12 +6,13 @@ import { Container } from './components/Container';
 
 
 class Dataset extends Component {
-  state = {dataset_name:"test_dataset", count: 555, loading:true};
+  // state = {dataset_name:"test_dataset", count: 555, loading:true};
+  state = {}
   componentDidMount = () =>
     this.props.fetchQuery(this.props.match.params.dataset)
 
   render() {
-    const data = this.state;
+    const results = this.props;
     let results = <Results results={data}/>
 
     return (
