@@ -4,7 +4,7 @@ import { fetchQuery } from '../../actions/query_actions';
 
 const msp = (state, ownProps) => {
   return {
-    dataset: state.entities.dataset
+    results: state.entities.dataset
   };
 }
 

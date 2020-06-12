@@ -14,7 +14,7 @@ export const Container = ({children}) => {
 export const MainGrid = ({children}) => {
   return (
     children ? 
-      <div className="main-grid">
+      <div className="main-container">
         {children}
       </div> : null
   )
@@ -23,7 +23,7 @@ export const MainGrid = ({children}) => {
 export const MiniGrid = ({children}) => {
   return (
     children ?
-      <div className="mini-grid">
+      <div className="mini-container">
         {children}
       </div> : null
   )

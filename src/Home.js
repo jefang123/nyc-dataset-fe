@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import { Container } from './components/Container';
+import { Header } from "./components/Header";
+import { MainGrid } from "./components/Container";
 
 class Home extends Component {
   state = {}
@@ -16,14 +17,14 @@ class Home extends Component {
       </React.Fragment>
     ) : null
     return ( datasets ? 
-      <Container>
-        <p className="App-intro">
+      <MainGrid>
+        <Header>
           NYC Datasets
-        </p>
-        <div className="f">
-          {links}
-        </div>
-      </Container> : "nothing here"
+        </Header>
+      <div className="main">
+        {links}
+      </div>
+    </MainGrid> : "nothing here"
     );
   }
 }

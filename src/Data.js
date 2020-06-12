@@ -2,7 +2,8 @@
 
 import React, { Component } from 'react';
 import { Results } from './Results';
-import { Container } from './components/Container';
+import { Header } from "./components/Header";
+import { MainGrid } from "./components/Container";
 
 
 class Dataset extends Component {
@@ -13,14 +14,15 @@ class Dataset extends Component {
 
   render() {
     const results = this.props;
-    let results = <Results results={data}/>
+    let dataResults = <Results results={results}/>
 
     return (
-      <Container>
-        {/* <p>Current dataset is {dataset_name}</p>
-        <p>Dataset count {count}</p> */}
-        {results}
-      </Container>
+      <MainGrid>
+        <Header>
+          NYC Datasets
+        </Header>
+        {dataResults}
+      </MainGrid>
     );
   }
 }

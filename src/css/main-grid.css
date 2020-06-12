@@ -19,12 +19,13 @@
 
 /* HEADER */
 .header {
-  display: fixed;
-  height: 150px;
+  display: flex;
+  /* height: 100px; */
   max-width: 80vw;
   margin: 0 5rem;
-  background-color: blue;
-  text-align: center;
+  /* background-color: blue; */
+  justify-content: center;
+  align-items:center;
   grid-area: head;
 }
 
@@ -37,6 +38,8 @@
 .main {
   grid-area: main;
   overflow: scroll;
+  display: flex;
+  flex-direction: column;
 }
 
 /* FOOTER */
