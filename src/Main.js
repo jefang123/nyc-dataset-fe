@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { Header } from "./components/Header";
 import { Dataset } from "./Dataset";
 import { MainGrid } from "./components/Container";
-import { Metadata } from "./Metadata";
+import Metadata from "./Metadata";
 
 class Main extends Component {
   state = {};

@@ -1,7 +1,7 @@
 /* SET UP GRID FOR MAIN CONTAINER */
 .main-container {
   display: grid;
-  grid-template-columns: 30% auto;
+  grid-template-columns: 200px auto;
   grid-template-rows: 60px auto;
   grid-template-areas: "head head"
                        "sidebar main";
@@ -30,12 +30,17 @@
 }
 
 /* DATASET INFO */
-.aside {
+aside {
+  margin-left: 5rem;
+  border-right: 2px solid grey;
+  margin-right: 1rem;
   grid-area: sidebar;
+  min-height: calc(100vh - 60px);
 }
 
 /* QUERY RESULTS */
-.main {
+main {
+  margin-right: 5rem;
   grid-area: main;
   overflow: scroll;
   display: flex;
