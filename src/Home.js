@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import { Header } from "./components/Header";
 import { MainGrid } from "./components/Container";
-import Metadata from "./Metadata"; 
 
 class Home extends Component {
   state = {}
@@ -22,9 +21,11 @@ class Home extends Component {
         <Header>
           NYC Datasets
         </Header>
-        <Metadata/>
+        <aside>
+          { links }
+        </aside>
         <main>
-          {links}
+          Click on a link to the left
         </main>
     </MainGrid> : "nothing here"
     );
