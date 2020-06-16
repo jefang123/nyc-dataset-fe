@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import { Results } from './Results';
 import { Header } from "./components/Header";
+import { Metadata } from "./Metadata";
 import { MainGrid } from "./components/Container";
 
 
@@ -21,6 +22,7 @@ class Dataset extends Component {
         <Header>
           NYC Datasets
         </Header>
+        <Metadata/>
         {dataResults}
       </MainGrid>
     );
