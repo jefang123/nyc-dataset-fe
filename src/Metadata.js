@@ -6,6 +6,9 @@ class Metadata extends Component {
   state = {};
   // componentDidMount = () =>
   //   this.props.fetchMetadata(this.props.match.params.dataset)
+  componentDidMount = () => {
+    this.props.fetchInfo(this.props.match.params.dataset)
+  }
 
   render() {
     // const { dataset_name, total, last_updated } = this.props;
