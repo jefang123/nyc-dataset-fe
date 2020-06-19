@@ -11,17 +11,18 @@ class Metadata extends Component {
   }
 
   render() {
-    // const { dataset_name, total, last_updated } = this.props;
+    const { dataset_name, total, last_updated } = this.props;
     return (
+ 
+      dataset_name ? 
+      <aside>
+        <p>{dataset_name}</p>
+        <p>Total rows: {total}</p>
+        <p>Last updated: {last_updated}</p>
+      </aside> : 
       <aside>
         <p>Panel</p>
       </aside> 
-      // dataset_name ? 
-      // <aside>
-      //   <p>{dataset_name}</p>
-      //   <p>Total rows: {total}</p>
-      //   <p>Last updated: {last_updated}</p>
-      // </aside> : null
     );
   }
 }
